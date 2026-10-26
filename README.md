@@ -2,7 +2,7 @@
 
 A small lexical analyzer (lexer) written in C. It reads a `.c` source file, breaks it into tokens, and prints what kind of token each one is: keyword, identifier, operator, literal and so on.
 
-I built this as part of the Advanced C module in my embedded systems training at Emertxe. A lexer is the first stage of a compiler, so this project was a good way to practise file I/O, string handling and pointers on something that actually does a real job.
+A lexer is the first stage of a compiler, project is a good way to practise file I/O, string handling and pointers on something that actually does a real job.
 
 ## What it can recognise
 
@@ -79,7 +79,7 @@ Special      : }
 Parsing : hello.c : Done
 ```
 
-## How it works
+ <!-- ## How it works
 
 1. `main` opens the file with `initializeLexer()` and keeps calling `getNextToken()` until it gets an empty lexeme, which means end of file.
 2. `getNextToken()` skips whitespace and comments, then looks at the first character to decide what it's reading:
@@ -99,7 +99,7 @@ The main trick is lookahead: to know where a token ends, the lexer has to read o
 - Added a `PREPROCESSOR` token type to `lexer.h`.
 - `main` stops on an empty lexeme (end of file) instead of on `UNKNOWN`, because invalid characters are also `UNKNOWN` and would stop the loop early.
 - Added an `argc` check and an error message if the file can't be opened.
-
+ -->
 ## Known limitations
 
 - No hex (`0x1F`) or octal numbers, no float suffixes (`3.5f`), no numbers starting with `.`
@@ -121,3 +121,12 @@ The main trick is lookahead: to know where a token ends, the lexer has to read o
 - Why `fgetc` returns `int` and not `char` (so EOF can be told apart from real data)
 - Splitting a project cleanly across a header and source files
 - Testing with many small input files, one feature at a time, rather than one big file
+
+## 👩‍💻 Author
+
+**Keerthana AR**  
+B.Tech Electrical & Electronics Engineering  
+Advanced Embedded Systems Program  
+GitHub: [keerthanaar42](https://github.com/keerthanaar42)
+
+---
